@@ -1,0 +1,33 @@
+body{
+	font-size: 12px;
+	font-family: 'Arial';
+	color: grey;
+	text-height: 2em;
+	text-decoration:none;
+}
+a{
+	color: #727272;
+	text-decoration: none;
+}
+
+a:hover{text-decoration:underline;color: #727272;}
+
+.daohang{
+	font-size:14px;
+	font-weight: bolder;
+	color: #b9f605;
+}
+.daohang a{
+	color: white;
+	text-decoration: none;
+}
+.daohang a:hover{
+	color: #b9f605;
+	text-decoration:underline;
+}
+.daohang .special{
+	color: #fdb306;
+}
+
+
+
