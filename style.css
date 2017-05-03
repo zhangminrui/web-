@@ -4,7 +4,13 @@ body{
 	color: grey;
 	text-height: 2em;
 	text-decoration:none;
+	background-image: url(E:/Web/picture/bg.gif);
+	background-repeat: no-repeat;
+	background-position:100% 50%;
+	height: 220px;
 }
+
+
 a{
 	color: #727272;
 	text-decoration: none;
@@ -28,6 +34,11 @@ a:hover{text-decoration:underline;color: #727272;}
 .daohang .special{
 	color: #fdb306;
 }
+ul{
+     
+     list-style-type:none;
+
+  }
 
 
 
