@@ -1,6 +1,131 @@
-
-.chao
-{
-	font-size: 14px;
-	a:hover{color:#69f605;text-decoration:none;}
+#con{
+	width: 1000px;
+	margin: 0 auto;
 }
+
+#con_left_top{
+	height: 25px;
+	margin-left: 43px;
+}
+
+#con_left{
+	width: 700px;
+	float: left;
+}
+
+#con_right{
+	width: 280px;
+	float: left;
+	margin-left: 16px;
+}
+
+a.eleven:link{color: #522a06;text-decoration: none;}
+a.eleven:visited{color: #522a06;text-decoration: none;}
+
+#con_left_big{
+	font-size: 16px;
+	height: 45px;
+	text-align: center;
+	line-height: 35px;
+	border-bottom: 1px solid #c9baa5;
+}
+
+#con_left_small{
+	font-size: 12px;
+	color: #757575;
+	margin: 10px;
+	text-align: center;
+}
+
+#con_left_con{
+	line-height: 28px;
+	padding: 10px;
+	font-size: 14px;
+	border-bottom: 1px solid #c9baa5;
+}
+
+#con_left_con_p{
+    text-indent: 2em;
+    margin-top: 5px;
+}
+
+#con_left_con_img{
+	width: 550px;
+	height: 366px;
+	margin-left: 60px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+#con_left_bottom{
+	padding-left: 10px;
+}
+
+#con_right_top{
+	border: 1px solid #c9baa5;
+	background-image: url(images/bg.png);
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+#con_right_top_img{
+	margin-top: 15px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+#con_right_top_list ul{
+	padding-left: 0px;
+	margin: 0px;
+	line-height: 30px;
+	margin-left: 13px;
+}
+
+#con_right_li{
+	list-style: none;
+}
+
+#bottom_head{
+	height: 23px;
+	background-position: center;
+	background-image: url(images/show.png);
+	background-repeat: no-repeat;
+	margin-top: 35px;
+	margin-bottom: 25px;
+}
+
+#bottom_con{
+	width: 280px;
+	height: 382px;
+	background-image: url(images/show_bg.png);
+	background-size: 100% 100%;
+}
+
+#bottom_pic{
+    width: 224px;
+    text-align: center;
+    padding-top: 15px;
+    margin-left: 25px;
+}
+
+#bottom_p{
+	width: 224px;
+	height: 125px;
+	font-size: 14px;
+	margin-left: 25px;
+	margin-top: 0px;
+	line-height: 20px;
+}
+
+#red{
+	color: #b70000;
+	font-weight: bold;
+}
+
+#bottom_view{
+	float: left;
+	margin-left: 30px;
+}
+
+a.white:link{color: #000;text-decoration: none;}
+a.white:visited{color: #000;text-decoration: none;}
