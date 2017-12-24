@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jquery-3.2.1.slim.min.js"></script>
+	
+</head>
+<body>
+<table border="1" cellpadding="10" cellspacing="0" align="left">
+	<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp用户注册</h1>
+	<tr id="tr1">
+		<td colspan="2">用户名：</td>
+		<td colspan="8" class="t"><input type="text" name="username"/></td>
+	</tr>
+
+	<tr id="">
+		<td colspan="2">密码：</td>
+		<td colspan="8"><input type="password" name="password"></td>
+	</tr>
+
+	<tr>
+		<td colspan="2">确认密码：</td>
+		<td colspan="8"><input type="password" name="password"></td>
+	</tr>
+
+	<tr>
+		<td colspan="10" align="center" id="bt"><input type="submit" name="" value="注册"/></td>
+	</tr>
+</table>
+<script>
+	// var $userName = $('input[name="username"]');
+	// var $pswd = $('input[name="password"]');
+	// var $h1 = $('h1');
+	// var $error1 = $('<span></span>');
+	// var $error2 = $('<span>用户名不能为空</span>');
+	// var $error3 = $('<span class="red">用户名不能为空</span>');
+	// $(document).ready(function(){
+	// 	$('#tr1').append($error3);
+		//$reSpan = $('span').remove();
+		//$p_con = $('td').text();
+		//$p_content = $('td').text('用户名不能为空');
+		var user=document.getElementsByTagName('input')[0];
+	window.onload=function(){
+		user.focus();
+	};
+	user.onblur=function(){
+		if(user.value.length==0)
+	{
+		var spans=document.getElementsByTagName('span');
+		if(spans.length>0)
+		{
+			spans[0].parentNode.removeChild(spans[0]);
+		}
+		var a=document.createElement('span');
+		a.innerHTML="用户名不能为空";
+		user.parentNode.appendChild(a);
+	}
+};
+	var user1=document.getElementsByTagName('input')[1];
+	user1.onblur=function(){
+		if (user1.value.length==0)
+		{
+			var spans1=document.getElementsByTagName('span');
+			if(spans1.length>0)
+			{
+				spans1[0].parentNode.removeChild(spans1[0]);
+			}
+			var c=document.createElement('span');
+			c.innerHTML="密码不能为空";
+			user1.parentNode.appendChild(c);
+		}
+	};
+	var user2=document.getElementsByTagName('input')[2];
+	user2.onblur=function(){
+		if((user2.value.length==0)||(user2.value!=user1.value))
+		{
+			var spans2=document.getElementsByTagName('span');
+			if(spans2.length>0)
+			{
+				spans2[0].parentNode.removeChild(spans2[0]);
+			}
+			var e=document.createElement('span');
+			e.innerHTML="密码不一致，重新输入密码";
+			user2.parentNode.appendChild(e);
+		}
+	};
+</script>
+</body>
+</html>

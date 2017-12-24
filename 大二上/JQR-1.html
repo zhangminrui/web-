@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script src="jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+<table id="a">
+	<tr><td>Row with Index #0</td></tr>
+	<tr><td>Row with Index #0</td></tr>
+	<tr><td>Row with Index #0</td></tr>
+	<tr><td>Row with Index #0</td></tr>
+</table>
+<script>
+    x = document.getElementsByTagName("tr")
+    for(i=0;i<x.length;i++)
+    {
+      if(i%2==0)
+        x[i].style.backgroundColor="blue"
+      else
+        x[i].style.backgroundColor="pink"
+    }
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <script src="jquery-3.2.1.slim.min.js"></script>
+  <script>
+    $(function(){
+      $("tr:even").css("background-color","gray");
+      $("tr:odd").css("background-color","pink");
+    });
+    // $(function(){
+    //   $("#a").css("border","solid 3px")
+    // })
+    // $(function(){
+    //   $("table td").css("border","solid 3px")
+    // })
+  </script>
+</head>
+<body>
+<table id="a">
+  <tr><td>Row with Index #0</td></tr>
+  <tr><td>Row with Index #0</td></tr>
+  <tr><td>Row with Index #0</td></tr>
+  <tr><td>Row with Index #0</td></tr>
+</table>
+</body>
+</html>
+
+
+
