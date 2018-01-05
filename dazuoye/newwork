@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+	.main{width:980px;height:300px;margin:0 auto;}
+	.indemo{width:800%;height:139px;}
+	.demo{width:948px;height:410px;float:left;overflow:hidden;}
+	.demo1{float:left;}
+	.demo2{float:left;}
+	
+		#nav{
+		margin-top: 20px;
+		margin-left: 50px;
+		list-style:none;
+		line-height:27px;
+		}
+		#nav a:link,#nav a:visited{
+		display:block;
+		width:80px;
+		color: #666;
+		text-align:center;
+		text-decoration:none;
+		background:#CCC;
+		}
+		#nav a:hover{
+		color: #FFF;
+		text-decoration: underline;
+		font-weight: bold;
+		background:#999;
+		}
+		#nav ul{list-style: none;}
+		#nav li{
+		float:left;
+		width: 180px;
+		}
+		#nav li ul li a:hover{
+		background:#C00;
+		}
+
+		#nav li ul{
+		display:none;
+		}
+		#nav li.subMenuShow ul{
+		display:block;
+		}
+		#table3{
+			position:absolute ;
+			left:30px;top:520px;
+		}
+	
+		
+</style>
+    <title>介绍我的故乡</title>
+    <script  type="text/javascript" > 
+
+   // 幻灯片效果
+	var speed=20;
+	var tab=document.getElementById("demo");
+	var tab1=document.getElementById("demo1");
+	var tab2=document.getElementById("demo2");
+	tab2.innerHTML=tab1.innerHTML;
+	function marquee(){
+		if(tab2.offsetWidth-tab.scrollLeft<=0)
+			{tab.scrollLeft=0}
+		else
+			{tab.scrollLeft++;}
+	}
+	var timer=setInterval(marquee,speed);
+	tab.onmouseover=function(){clearInterval(timer)};
+	tab.onmouseout=function(){timer=setInterval(marquee,speed)}
+   //表单
+   var user=document.getElementsByTagName('input')[0];
+	window.onload=function(){
+		user.focus();
+	};
+	user.onblur=function(){
+		if(user.value.length==0)
+	{
+		var spans=document.getElementsByTagName('span');
+		if(spans.length>0)
+		{
+			spans[0].parentNode.removeChild(spans[0]);
+		}
+		var a=document.createElement('span');
+		a.innerHTML="手机号不能为空";
+		user.parentNode.appendChild(a);
+	}
+};
+	var user1=document.getElementsByTagName('input')[1];
+	user1.onblur=function(){
+		if (user1.value.length==0)
+		{
+			var spans1=document.getElementsByTagName('span');
+			if(spans1.length>0)
+			{
+				spans1[0].parentNode.removeChild(spans1[0]);
+			}
+			var c=document.createElement('span');
+			c.innerHTML="密码不能为空";
+			user1.parentNode.appendChild(c);
+		}
+	};
+	var user2=document.getElementsByTagName('input')[2];
+	user2.onblur=function(){
+		if((user2.value.length==0)||(user2.value!=user1.value))
+		{
+			var spans2=document.getElementsByTagName('span');
+			if(spans2.length>0)
+			{
+				spans2[0].parentNode.removeChild(spans2[0]);
+			}
+			var e=document.createElement('span');
+			e.innerHTML="密码不一致，重新输入密码";
+			user2.parentNode.appendChild(e);
+		}
+	};
+	//评论及时显示
+	b.onclick=function(){
+		var c=document.getElementById("content1").value;
+		var objUl = document.getElementById("ul1");   
+		var objLen = objUl.children.length;  
+		var lastObj = objUl.children[objLen-1];//找到最后一个li
+		var p = document.createElement("li");
+		p.innerHTML=c;
+		insertAfter(p,lastObj);  
+		function insertAfter( newElement, targetElement ){   
+		    var parent = targetElement.parentNode;   
+		    if( parent.lastChild == targetElement ){  
+		        parent.appendChild( newElement, targetElement );   
+		    }else{   
+		        parent.insertBefore( newElement, targetElement.nextSibling );   
+		    };   
+		};   
+	}
+
+	// 菜单
+	
+		window.onload = function(){
+			var liNodes = document.getElementsByTagName("li");
+			for (var i=0; i<liNodes.length; i++)
+			{
+				liNodes[i].onmouseover = function(){
+					this.className = "subMenuShow";
+				}
+				liNodes[i].onmouseout = function(){
+					this.className = "";
+				}
+			}
+		}
+	</script>
+</head>
+<body bgcolor="purple">
+   <h1 style="color:blue">我的故乡</h1>
+  <table width="1000px" height="50px">
+     <ul id="nav">
+		<li><a  href="#">家乡</a>
+			<ul >
+				<li><a href="#">主页介绍</a></li>
+				<li><a href="#">地图介绍</a></li>
+				<li><a href="#">风景历程</a></li>
+			</ul>
+		</li>
+		<li><a href="#">风景</a>
+			<ul>
+				<li><a href="#">最美相册</a></li>
+				<li><a href="#">最新图集</a></li>
+				<li><a href="#">动感影集</a></li>
+			</ul>
+		</li>
+		<li><a href="#">风俗</a>
+			<ul>
+				<li><a href="#">传统习惯</a></li>
+				<li><a href="#">生活点滴</a></li>
+				<li><a href="#">精彩转载</a></li>
+			</ul>
+		</li>
+		<li><a href="#">小吃</a>
+			<ul>
+				<li><a href="#">美食云集</a></li>
+				<li><a href="#">小吃特色</a></li>
+				<li><a href="#">小吃习惯</a></li>
+			</ul>
+		</li>
+		<li><a href="#">趣事</a>
+			<ul>
+				<li><a href="#">奇闻异事</a></li>
+				<li><a href="#">历史传说</a></li>
+				<li><a href="#">科学发现</a></li>
+			</ul>
+		</li>
+	</ul>
+
+     </tr>
+     <table id="table2" width="1000">
+       <div id="demo" class="demo">
+	   <div id="indemo" class="indemo">
+		<div id="demo1" class="demo1">
+			<img src="images/1.jpg" width="400px"/>
+			<img src="images/2.jpg" width="400px"/>
+			<img src="images/3.jpg" width="400px"/>
+			<img src="images/4.jpg" width="400px"/>
+			<img src="images/5.jpg" width="400px"/>
+			<img src="images/6.jpg" width="400px"/>
+			<img src="images/7.jpg" width="400px"/>
+			<img src="images/8.jpg" width="400px"/>
+		</div>
+	 	<div id="demo2" class="demo2"></div>
+	 </div>
+	</div> 
+    </table>
+    <table id="table3" >
+       <tr>
+         <td width="200px">对我家乡的评论:
+		  <ul id="ul1">
+		    <li>风景优美</li>
+		    <li>名胜古迹非常多</li>
+		    <li>热情好客</li>
+		    <li>空气清新</li>
+          </ul>
+
+         </td>
+         <td id="content"><textarea id="content1" width="30px" heigth="200px"></textarea><br/>
+    		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button id="b">发表</button>
+    	 </td>
+         <td>
+			<table border="1" cellpadding="10" cellspacing="0" align="left">
+	<h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;留下你的足迹</h1>
+	<tr id="tr1">
+		<td colspan="2">手机号：</td>
+		<td colspan="8" class="t"><input type="text" name="username"/></td>
+	</tr>
+    <tr id="">
+		<td colspan="2">密码：</td>
+		<td colspan="8"><input type="password" name="password"></td>
+	</tr>
+
+	<tr>
+		<td colspan="2">确认密码：</td>
+		<td colspan="8"><input type="password" name="password"></td>
+	</tr>
+
+	<tr>
+		<td colspan="10" align="center" id="bt"><input type="submit" name="" value="OK"/></td>
+	</tr>
+</table>
+
+         </td>
+       </tr>
+      
+
+</body> 
+
+	
+    
+
+
+ 
+
+</html>
