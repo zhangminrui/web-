@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<body background="主页.png">
+<tsble width="200px">
+<tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+</tsble>
+<table width="800px" height=350px"">
+<tr height="25px">
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td width="100px" height="50px"><input type="submit" value="智能盐盒盖" onclick="window.open('')"></td>
+ <td></td>
+</tr>
+<tr>
+<td width="100px" height="50px"><input type="submit" value="智能盐把手" onclick="window.open('yan.html')"></td>
+ <td></td>
+ <td></td>
+ <td></td>
+<td width="100px" height="50px"><input type="submit" value="气体传感器" onclick="window.open('kongqi.html')"></td>
+ <td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td><td></td><td width="100px" height="50px"><input type="submit" value="智能盐盒体" onclick="window.open('')"></td><td></td>
+</tr>
+<tr>
+<td width="100px" height="50px"><input type="submit" value="无线传输模块" onclick="window.open('cai.html')"></td><td></td><td></td><td></td><td width="100px" height="50px"><input type="submit" value="重力传感器" onclick="window.open('zhongli.html')"></td><td></td>
+</tr>
+<tr>
+ <td></td><td></td><td></td><td></td><td width="100px" height="50px"><input type="submit" value="中央处理器" onclick="window.open('')"></td><td></td>
+</tr>
+<tr height="3px">
+ <td></td><td></td><td></td><td></td><td width="100px" height="50px"><input type="submit" value="显示器" onclick="window.open('sheyan.html')"></td><td></td>
+</tr>
+<tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+</tr>
+<tr>
+ <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+ <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+<tr>
+ <td></td><td></td><td></td><td></td><td></td><td></td>
+</tr>
+</table>
+</body>
+<style>
+body{
+   background-repeat:no-repeat;
+}
+</style>
+</html>
